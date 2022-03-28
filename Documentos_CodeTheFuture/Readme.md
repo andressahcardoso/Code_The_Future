@@ -15,6 +15,9 @@
 
 <hr>
 
+<h4> Autor: </h4>
 
+<p> Andressa Hensel Cardoso </p>
+<p> 📚 Cursando Ensino Médio Técnico em Tecnologia da Internet - Senac </p>
 
 
