@@ -11,8 +11,9 @@
 
 <p align="justify" > Arquivos como brainstorming, protótipo de tela e documentos do projeto podem ser acessados no mesmo repositório. </p>
 
-<p> Para saber mais sobre o projeto Code The Future, acesse o site da SKA <a href="https://ska.com.br/"> aqui </a> </p>
+<p> Para saber mais sobre o projeto Code The Future, acesse o site da SKA <a href="https://ska.com.br/"> aqui. </a> </p>
 
+<hr>
 
 
 
