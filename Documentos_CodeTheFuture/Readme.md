@@ -5,5 +5,5 @@
 
 <h4> Sobre o Projeto: </h4>
 
-<p> Atualmente muitas pessoas gastam boa parte do seu dia utilizando, principalmente, redes sociais. Essa aplicação foi criada como uma alternativa para que as pessoas consigam analisar quanto tempo elas passam utilizando aplicativos de redes sociais,  a fim de possibilitar uma melhor gestão do tempo.  </p>
+<p align="justify" > Atualmente muitas pessoas gastam boa parte do seu dia utilizando, principalmente, redes sociais. Essa aplicação foi criada como uma alternativa para que as pessoas consigam analisar quanto tempo elas passam utilizando aplicativos de redes sociais,  a fim de possibilitar uma melhor gestão do tempo.  </p>
 
