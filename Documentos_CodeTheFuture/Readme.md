@@ -7,3 +7,9 @@
 
 <p align="justify" > Atualmente muitas pessoas gastam boa parte do seu dia utilizando, principalmente, redes sociais. Essa aplicação foi criada como uma alternativa para que as pessoas consigam analisar quanto tempo elas passam utilizando aplicativos de redes sociais,  a fim de possibilitar uma melhor gestão do tempo.  </p>
 
+<h4> Informações: </h4>
+
+<p align="justify" > Arquivos como brainstorming, protótipo de tela e documentos do projeto podem ser acessados no mesmo  </p>
+
+
+
