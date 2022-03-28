@@ -9,7 +9,9 @@
 
 <h4> Informações: </h4>
 
-<p align="justify" > Arquivos como brainstorming, protótipo de tela e documentos do projeto podem ser acessados no mesmo  </p>
+<p align="justify" > Arquivos como brainstorming, protótipo de tela e documentos do projeto podem ser acessados no mesmo repositório. </p>
+
+
 
 
 
