@@ -34,10 +34,7 @@
         leEAtualiza();
     })
 
-    //Ou quando clica no boão atualizar
-    btnAtualiza.addEventListener('click', function(){
-        leEAtualiza();
-    })
+   
     
 
 })()
