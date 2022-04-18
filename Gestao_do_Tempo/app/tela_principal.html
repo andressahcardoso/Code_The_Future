@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title> Gestão do Tempo </title>
+        <link rel="stylesheet" type="text/css" href="tela_principal.css" media="screen" />
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+
+    <body>
+
+        <!-- INÍCIO | Imagens de Fundo -->
+
+        <section class="secao_imagens_fundo">
+            <div>
+                <span><img class="imagem_fundo_1" src="../assets/1.PNG" alt="Imagem 1"/></p></span>
+            </div>
+        </section>
+
+        <section class="secao_imagens_fundo flex-end">
+            <div>
+                <span><img class="imagem_fundo_2" src="../assets/2.PNG" alt="Imagem 2"/></p></span>
+            </div>
+        </section>
+
+        <section class="secao_imagens_fundo flex-end column">
+            <div>
+                <span><img class="imagem_fundo_3" src="../assets/3.PNG" alt="Imagem 3"/></p></span>
+            </div>
+        </section>
+
+        <section class="secao_imagens_fundo flex-end column">
+            <div>
+                <span><img class="imagem_fundo_4" src="../assets/4.PNG" alt="Imagem 4"/></p></span>
+            </div>
+        </section>
+
+        <!-- FIM | Imagens de Fundo -->
+
+
+        <!-- INÍCIO | Logo e Usuário -->
+
+        <section class="header">
+            <img class="logo" src="../assets/Logo.PNG" alt="Logo"/></p>
+    
+            <div class="usuario_informacoes">
+                <ul class="menu">   
+                    <li><img class="imagem" src="../assets/Usuario.PNG" alt="Sua imagem" width="35" height="35" style="border-radius: 50px ;"></li>
+
+                    <li><a href="#" class="usuario_nome">Usuário</a>
+                        <ul>
+                            <form class="upload-imagem btn_opcoes_imgUsuario">
+                                <li><a href="#"><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
+                                <input type="file" class="upload_imgUsuario" name="arquivo" id="arquivo" required></a></li>
+                                <li><a href="#"> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
+                            </form>   
+
+                            <li><a href="#"><button class="btnAtualiza btn_opcoes_imgUsuario">Atualiza imagem</button></a></li>
+                            <script  src="./tela_principal.js"></script>
+                        </ul>
+                    </li>      
+                </ul>
+            </div>
+        </section>
+
+        <!-- FIM | Logo e Usuário -->
+           
+
+        <!-- INÍCIO | Barra de Status -->
+
+        <section class="barra-status">
+            <p class="situacao-text">Ativo</p>
+        </section>
+       
+        <!-- FIM | Barra de Status -->
+
+
+        <!-- INÍCIO | Informações -->
+
+        <section class="secao_informações">
+            <h2 class="margin_left_right efeito_digitacao_titulo">Gestão do Tempo | Redes Sociais</h2>
+            <p class="margin_left_right">Aqui você poderá controlar quanto tempo passa utilizando aplicativos de redes sociais por dia, durante o trabalho, escola, e em casa. Para isso selecione uma das opções e clique no botão abaixo assim que começar e/ou parar de utilizar redes sociais. </p>
+        </section>
+        
+        <!-- INÍCIO | Informações -->
+
+
+        <!-- INÍCIO | Opções -->
+
+        <section class="secao_opcoes">
+            <h3 class="margin_left_right margin_top_subtitulo">Em que lugar você está no momento: </h3>
+       
+            <div class="opcao_local_um">
+                <input type="checkbox" class="checkbox" name="horns">
+                <label class="text">Trabalho</label>
+            </div>
+
+            <div class="opcoes_local">
+                <input type="checkbox" class="checkbox" name="horns">
+                <label class="text">Escola</label>
+            </div>
+
+            <div class="opcoes_local">
+                <input type="checkbox" class="checkbox" name="horns">
+                <label class="text">Casa</label>
+            </div>
+
+            <div class="opcoes_local">
+                <input type="checkbox" class="checkbox" name="horns">
+                <label class="text">Outro</label>
+            </div>
+        </section>
+
+        <!-- FIM | Opções -->
+
+    
+        <!-- INÍCIO | Botões - Iniciar e Parar -->
+
+        <section class="secao_btn_inicio_fim flex-end column">
+            <button class="btn_inicio_fim fim-btn"> Início </button>
+            <button class=" btn_inicio_fim inicio-btn"> Fim / Parada </button>
+        </section> 
+
+        <!-- FIM | Botões - Iniciar e Parar -->
+
+    </body>
+</html>

@@ -1,0 +1,279 @@
+*{margin: 0; padding: 0;}
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* INÍCIO | Imagens de Fundo */
+
+.secao_imagens_fundo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.imagem_fundo_1, .imagem_fundo_2 {
+    width: 100%;
+    height: 25%;
+}
+
+.imagem_fundo_4 {
+    float: right;
+}
+
+.imagem_fundo_3 {
+    float: left;
+}
+
+/* FIM | Imagens de Fundo */
+
+
+/* INÍCIO | Logo e Usuário */
+
+.logo {
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 20px;
+}
+
+.header {
+    height: 6%;
+    background-color: rgba(253, 253, 253, 0);
+    display: inline-block;
+    padding: 7px;
+    z-index: 1000;
+}
+
+.usuario_informacoes {
+    margin-top: -70px;
+}
+
+.menu{
+    list-style:none;
+    border:0px solid #c0c0c0;
+    float:right;
+    margin-top: 10px;
+    margin-right: 80px;
+    z-index: 1100;
+    }
+    
+    .menu li{
+        position:relative;
+        float:left;
+        border-right:0px solid #c0c0c0;
+    }
+    
+    .menu li a{
+        color:rgb(10, 10, 10); 
+        text-decoration: none; 
+        padding: 5px 10px; 
+        display: block;
+    }
+    
+    .menu li  ul{
+        position:absolute;
+        top:25px;
+        left:0;
+        background-color:#fff;
+        display:none;
+
+    }
+    
+    .menu li ul li{
+        border:0px solid #c0c0c0;
+        display:block;
+        width:150px;
+    }
+    
+    .menu li a:hover{
+        background:rgb(218, 216, 216);
+        color:#fff;
+        text-shadow:0px 0px 5px #fff;
+    }
+    
+    .menu li:hover ul{
+        display:block;
+    }
+
+.usuario_nome {
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.btn_opcoes_imgUsuario {
+    background: rgba(255, 255, 255, 0);
+    border: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.upload_imgUsuario {
+    display: none;
+}
+
+/* FIM | Logo e Usuário */
+
+
+/* INÍCIO | Barra de Status */
+
+.barra-status {
+    margin-top: 10px;
+    height: 10%;
+    background-color: rgba(88, 234, 173, 1) ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 200;
+}
+
+.situacao-text {
+    font-size: 1em;
+    color: rgb(255, 251, 251);
+    margin-right: 3.5em;
+    float: right;
+    margin-top: -5px;
+}
+
+/* FIM | Barra de Status */
+
+
+/* INÍCIO | Informações */
+
+.secao_informações {
+    flex-grow: 1;
+    margin-top: 40px;
+    z-index: 1000;
+}
+
+.efeito_digitacao_titulo {
+    width: 31ch; /* ch - diz que em determinado espaço sempre deve conter x caracteres, nesse caso 31 */
+    font-family: monospace;
+    font-size: 2em;
+    animation: typing 2s steps(100), infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 35px;
+    display: flex;  
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.margin_left_right {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+h2, p {
+    color: black;
+    margin-top: 2%;
+}
+
+/* FIM | Informações */
+
+
+/* INÍCIO | Opções */
+
+.secao_opcoes {
+    flex-grow: 1;
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+.margin_top_subtitulo {
+    margin-top: 40px;
+}
+
+.opcao_local_um {
+    color: black;
+    display:inline-block ;
+    margin-left: 36px;
+    width: 10%;
+    margin-top: 20px;
+}
+
+.opcoes_local {
+   width: 10%;
+   text-align: center;
+   display:inline-block ;
+   margin-left: 16%;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    display: inline-block ;
+}
+
+input {
+    margin: 7px;
+}
+
+/* FIM | Opções */
+
+
+/* INÍCIO | Botões - Iníciar e Parar */
+
+.secao_btn_inicio_fim {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    margin-top: -230px;
+    text-align: center;
+}
+
+.column {
+    min-height: 200px;
+    flex-direction: column;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.btn_inicio_fim {
+    width: 94%;
+    height: 10%;
+    border-radius: 5px;
+    border: none;
+    margin-left: 3%;
+    padding: 12px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.inicio-btn {
+    background: rgba(88, 234, 173, 1);
+    margin-bottom: 4% !important;
+}
+
+.fim-btn {  
+    background: rgba(254, 104, 105, 1);
+    margin-bottom: 1% !important;
+    margin-inline-end: 10% ;
+}
+
+/* FIM | Botões - Iníciar e Parar */
