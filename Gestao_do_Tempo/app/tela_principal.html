@@ -44,18 +44,15 @@
     
             <div class="usuario_informacoes">
                 <ul class="menu">   
-                    <li><img class="imagem" src="../assets/Usuario.PNG" alt="Sua imagem" width="35" height="35" style="border-radius: 50px ;"></li>
+                    <li><img id="imagem_usuario" class="img_usuario" src="../assets/Usuario.PNG" alt="Imagem Perfil"></li>
 
-                    <li><a href="#" class="usuario_nome">Usuário</a>
+                    <li><a class="usuario_nome">Usuário</a>
                         <ul>
-                            <form class="upload-imagem btn_opcoes_imgUsuario">
-                                <li><a href="#"><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
-                                <input type="file" class="upload_imgUsuario" name="arquivo" id="arquivo" required></a></li>
-                                <li><a href="#"> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
-                            </form>   
-
-                            <li><a href="#"><button class="btnAtualiza btn_opcoes_imgUsuario">Atualiza imagem</button></a></li>
-                            <script  src="./tela_principal.js"></script>
+                            <form id="selecionarAlterarImagem" class="btn_opcoes_imgUsuario">
+                                <li><a><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
+                                <input type="file" class="UploadImgUsuario" id="arquivo" required ></a></li>
+                                <li><a> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
+                            </form>          
                         </ul>
                     </li>      
                 </ul>
@@ -67,9 +64,14 @@
 
         <!-- INÍCIO | Barra de Status -->
 
-        <section class="barra-status">
-            <p class="situacao-text">Ativo</p>
+        <section class="Barra_Status Barra_Status_Inativo" id="horario">
+            <p class="Barra_Status_Text ">INATIVO</p>
         </section>
+
+        <section class="" id="tempo_total">
+            <p class="texto"></p>
+        </section>
+
        
         <!-- FIM | Barra de Status -->
 
@@ -90,23 +92,23 @@
             <h3 class="margin_left_right margin_top_subtitulo">Em que lugar você está no momento: </h3>
        
             <div class="opcao_local_um">
-                <input type="checkbox" class="checkbox" name="horns">
-                <label class="text">Trabalho</label>
+                <input type="checkbox" class="checkbox" name="horns" onclick="trabalho()">
+                <label> Trabalho </label>
             </div>
 
             <div class="opcoes_local">
-                <input type="checkbox" class="checkbox" name="horns">
-                <label class="text">Escola</label>
+                <input type="checkbox" class="checkbox" name="horns" onclick="escola()">
+                <label> Escola </label>
             </div>
 
             <div class="opcoes_local">
-                <input type="checkbox" class="checkbox" name="horns">
-                <label class="text">Casa</label>
+                <input type="checkbox" class="checkbox" name="horns" onclick="casa()">
+                <label> Casa </label>
             </div>
 
             <div class="opcoes_local">
-                <input type="checkbox" class="checkbox" name="horns">
-                <label class="text">Outro</label>
+                <input type="checkbox" class="checkbox" name="horns" onclick="outro()">
+                <label> Outro </label>
             </div>
         </section>
 
@@ -115,12 +117,15 @@
     
         <!-- INÍCIO | Botões - Iniciar e Parar -->
 
-        <section class="secao_btn_inicio_fim flex-end column">
-            <button class="btn_inicio_fim fim-btn"> Início </button>
-            <button class=" btn_inicio_fim inicio-btn"> Fim / Parada </button>
+        <section class="secao_btn_inicio_fim flex-end column ">
+
+            <button onclick="inicio()" class="btn_inicio_fim inicio-btn" id="#iniciar"> Início </button>
+            <button onclick="fim()" class=" btn_inicio_fim fim-btn Ativar_Desativar_Botoes" id="#fim"> Fim / Parada </button>
         </section> 
 
         <!-- FIM | Botões - Iniciar e Parar -->
+
+        <script src="tela_principal.js"></script>
 
     </body>
 </html>

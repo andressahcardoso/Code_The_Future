@@ -46,18 +46,18 @@ body {
 
 /* INÍCIO | Logo e Usuário */
 
-.logo {
-    height: 40px;
-    margin-top: 2px;
-    margin-left: 20px;
-}
-
 .header {
     height: 6%;
     background-color: rgba(253, 253, 253, 0);
     display: inline-block;
     padding: 7px;
     z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 20px;
 }
 
 .usuario_informacoes {
@@ -92,7 +92,6 @@ body {
         left:0;
         background-color:#fff;
         display:none;
-
     }
     
     .menu li ul li{
@@ -111,6 +110,12 @@ body {
         display:block;
     }
 
+.img_usuario {
+    width: 35;
+    height: 35; 
+    border-radius: 50px;
+}
+   
 .usuario_nome {
     font-weight: 500;
     font-size: 1em;
@@ -124,8 +129,8 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.upload_imgUsuario {
-    display: none;
+.UploadImgUsuario {
+    display: none; 
 }
 
 /* FIM | Logo e Usuário */
@@ -133,22 +138,53 @@ body {
 
 /* INÍCIO | Barra de Status */
 
-.barra-status {
+.Barra_Status {
     margin-top: 10px;
     height: 10%;
-    background-color: rgba(88, 234, 173, 1) ;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     z-index: 200;
+    font-size: medium;
+    color: #fff;
 }
 
-.situacao-text {
+.Barra_Status_Text {
     font-size: 1em;
     color: rgb(255, 251, 251);
-    margin-right: 3.5em;
+    margin-right: 6em;
     float: right;
     margin-top: -5px;
+}
+
+.Barra_Status_Inativo {
+    pointer-events: none;
+    background-color: #c0c0c0;
+}
+
+.Barra_Status_Ativo {
+    pointer-events: none;
+    background-color: rgba(88, 234, 173, 1);
+}
+
+.Barra_Status_Fim {
+    pointer-events: none;
+    background-color: rgb(247, 158, 158);
+}
+
+.Barra_Status_Tempo_Total {
+    height: 8%;
+    margin-top: 2px;
+    width: 24%;
+    margin-left: 75.7%;
+    padding: 2px;
+    float: right;
+    background-color: rgb(247, 158, 158) ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 200;
+    color: white;
 }
 
 /* FIM | Barra de Status */
@@ -158,8 +194,13 @@ body {
 
 .secao_informações {
     flex-grow: 1;
-    margin-top: 40px;
+    margin-top: 25px;
     z-index: 1000;
+}
+
+.margin_left_right {
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 .efeito_digitacao_titulo {
@@ -173,15 +214,10 @@ body {
     display: flex;  
 }
 
-@keyframes typing {
+@keyframes typing { /* Usada para criar uma animação */
     from {
         width: 0;
     }
-}
-
-.margin_left_right {
-    margin-right: 40px;
-    margin-left: 40px;
 }
 
 h2, p {
@@ -230,7 +266,7 @@ input {
 }
 
 /* FIM | Opções */
-
+  
 
 /* INÍCIO | Botões - Iníciar e Parar */
 
@@ -242,13 +278,13 @@ input {
     text-align: center;
 }
 
+.flex-end {
+    justify-content: flex-end;
+}
+
 .column {
     min-height: 200px;
     flex-direction: column;
-}
-
-.flex-end {
-    justify-content: flex-end;
 }
 
 .btn_inicio_fim {
@@ -263,17 +299,23 @@ input {
     font-weight: bold;
     cursor: pointer;
     z-index: 1000;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .inicio-btn {
     background: rgba(88, 234, 173, 1);
-    margin-bottom: 4% !important;
+    margin-bottom: 1% !important;
+    margin-inline-end: 10% ;
 }
 
 .fim-btn {  
     background: rgba(254, 104, 105, 1);
-    margin-bottom: 1% !important;
-    margin-inline-end: 10% ;
+    margin-bottom: 4% 
+}
+
+.Ativar_Desativar_Botoes {
+    pointer-events: none;
 }
 
 /* FIM | Botões - Iníciar e Parar */
