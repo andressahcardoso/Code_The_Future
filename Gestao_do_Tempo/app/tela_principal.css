@@ -174,19 +174,37 @@ body {
 
 .Barra_Status_Tempo_Total {
     height: 8%;
-    margin-top: 2px;
-    width: 24%;
-    margin-left: 75.7%;
-    padding: 2px;
+    margin-top: -1px;
+    width: 20%;
+    margin-left: 40%;
     float: right;
-    background-color: rgb(247, 158, 158) ;
+    background-color: rgb(255, 255, 255) ;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     z-index: 200;
-    color: white;
+    color: rgb(5, 5, 5);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(247, 158, 158);
 }
 
+.Barra_Status_Cronometro {
+    height: 8%;
+    margin-top: -22px;
+    width: 20%;
+    margin-left: 40%;
+    float: right;
+    background-color: rgb(255, 255, 255) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    color: rgb(5, 5, 5);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(88, 234, 173, 1);
+}
 /* FIM | Barra de Status */
 
 
@@ -194,7 +212,7 @@ body {
 
 .secao_informações {
     flex-grow: 1;
-    margin-top: 25px;
+    margin-top: 24px;
     z-index: 1000;
 }
 
@@ -222,7 +240,7 @@ body {
 
 h2, p {
     color: black;
-    margin-top: 2%;
+    margin-top: 1.59%;
 }
 
 /* FIM | Informações */

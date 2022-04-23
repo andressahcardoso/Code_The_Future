@@ -40,6 +40,7 @@
       horario.classList.add("Barra_Status_Ativo"); // Ativa | Status Ativo - sessão verde.
       horario.classList.remove("Barra_Status_Fim"); // Desativa | Horário de FIM - sessão vermelha.
       tempo_total.classList.remove("Barra_Status_Tempo_Total"); // Desativa | Tempo Total de Uso - sessão vermelha.
+      cronometro.classList.add("Barra_Status_Cronometro"); // Ativa | Cronômetro.
     });
 
     fimBtn.addEventListener("click", function fim() {
@@ -48,6 +49,7 @@
       horario.classList.remove("Barra_Status_Ativo"); // Desativa | Status Ativo - sessão verde.
       horario.classList.add("Barra_Status_Fim");  // Ativa | Horário de FIM - sessão vermelha.
       tempo_total.classList.add("Barra_Status_Tempo_Total"); // Ativa | Tempo Total de Uso - sessão vermelha.
+      cronometro.classList.remove("Barra_Status_Cronometro"); // Desativa | Cronômetro.
     });
 
 })()
@@ -84,7 +86,46 @@
 
         Hora1 = h;
         Minuto1 = m;
-    }
+
+
+        // INÍCIO | Cronômetro
+
+        let segundos = 0;
+        let minutos = 0;
+        let horas = 0;
+          
+        function segundo(){
+
+            segundos++; // Incrementa os segundos.
+
+            if(segundos==60){
+                minutos++; // Incrementa os minutos.
+                segundos=0; // Zera os segundos.
+
+                if (minutos < 10){
+                    minutos="0" +minutos;
+                }
+            }
+  
+            if(minutos==60){     
+                horas++; // Incrementa as horas.
+                minutos=0; // Zera os minutos.
+                
+                if (horas < 10){
+                    horas="0" +horas;
+                }
+            }
+   
+            if (segundos < 10){  
+                segundos= "0" +segundos;
+            }  
+        
+            document.getElementById('cronometro').innerText= horas+" : "+minutos+" : "+segundos;
+        }
+
+        cronometro_horario = setInterval(function(){ segundo() },1000)
+    }  
+
 
     
     function fim() {
@@ -95,6 +136,9 @@
 
         Hora2 = h;
         Minuto2 = m;
+
+        clearInterval(cronometro_horario); // Para o cronômetro.
+        document.getElementById('cronometro').innerText=""; // Usado para não aparecer o cronometro quando clicar no botão de fim.
 
 
         // INÍCIO | Cálculo do tempo de uso.
@@ -127,10 +171,10 @@
         MinutoTotal = SomaMinutos - (HoraTotal * 60)
 
         if (HoraTotal == 0){
-            document.getElementById('tempo_total').innerText= "Tempo Total de Uso |  " + MinutoTotal+ " Minuto(s) ⠀⠀⠀⠀⠀⠀⠀⠀";
+            document.getElementById('tempo_total').innerText= "Tempo Total de Uso |  " + MinutoTotal+ " Minuto(s) ";
         }
 
         else {
-            document.getElementById('tempo_total').innerText= "Tempo Total de Uso |  " + HoraTotal + "Hora(s) " + MinutoTotal + "Minuto(s) ⠀⠀⠀⠀⠀⠀⠀⠀";
+            document.getElementById('tempo_total').innerText= "Tempo Total de Uso |  " + HoraTotal + "Hora(s) " + MinutoTotal + "Minuto(s)";
         }
     }
