@@ -1,0 +1,153 @@
+*{margin: 0; padding: 0;}
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* INÍCIO | Imagens de Fundo */
+
+.secao_imagens_fundo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.div {
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.imagem_fundo_1 {
+    margin-top: -1%;
+    width: 42%;
+    height: 102.2%;
+}
+
+/* INÍCIO | Logo e Usuário */
+
+.header {
+    height: 6%;
+    background-color: rgba(253, 253, 253, 0);
+    display: flex;
+    padding: 7px;
+    z-index: 1000;
+    
+}
+
+.logo {
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.texto {
+    margin-top: 4%;
+    margin-left: 45%;
+    z-index: 1000;
+    font-family: 'arial';
+}
+
+.title {
+    width: 100%;
+    padding: 2%;
+    margin-top: 20px;
+}
+
+.titulo {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-right:0% ;
+    margin-left: 10%;
+}
+
+.radius {
+    border-radius: 50px;
+}
+
+.imputTexteNewsLetterNome {
+    display: block;
+    width: 70%;
+    height: 40px;
+    padding: 2%;
+    margin-top: 10px;
+    border: solid;
+    border-color: black;
+}
+
+.nome1 {
+    margin-top: 10%;
+}
+
+.senha2 {
+    margin-top: 5%;
+}
+
+.enviar {
+    margin-top: 5%;
+}
+
+
+.btnenviar {
+    display: block;
+    width: 20%;
+    height: 40px;
+    border: solid;
+    margin-left: 23%;
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.btnpular {
+    display: block;
+    width: 25%;
+    height: 40px;
+    border: solid 2px;
+    margin-left: 75%;
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: -72.2px;
+   border-left: none;
+   border-right: none;
+   text-decoration: none;
+}
+
+.pular {
+    text-decoration: none;
+}
+
+
+
+.btnpular2 {
+    display: block;
+    width: 5.5%;
+    height: 20%;
+    margin-top: 51.2px;
+    border-top: none;
+    border-left: 2px;
+    border-right: none;
+    margin-left: 68%;
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transform: rotate(250deg)
+}

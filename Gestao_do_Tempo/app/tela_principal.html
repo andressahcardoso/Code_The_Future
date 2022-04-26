@@ -40,18 +40,20 @@
         <!-- INÍCIO | Logo e Usuário -->
 
         <section class="header">
-            <img class="logo" src="../assets/Logo.PNG" alt="Logo"/></p>
+            <img class="logo" src="../assets/Logo-tela-principal.PNG" alt="Logo"/></p>
     
             <div class="usuario_informacoes">
                 <ul class="menu">   
                     <li><img id="imagem_usuario" class="img_usuario" src="../assets/Usuario.PNG" alt="Imagem Perfil"></li>
 
-                    <li><a class="usuario_nome">Usuário</a>
+                    <li><a class="usuario_nome" id="nome">Usuário</a>
                         <ul>
                             <form id="selecionarAlterarImagem" class="btn_opcoes_imgUsuario">
                                 <li><a><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
                                 <input type="file" class="UploadImgUsuario" id="arquivo" required ></a></li>
                                 <li><a> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
+                                <input  class="nome" type="text" placeholder="Digite seu nome" id="username2" name="username2" >
+                                <button class="btnenviar" type="submit" onclick="nome()"> Enviar </button>
                             </form>          
                         </ul>
                     </li>      
@@ -86,6 +88,9 @@
             <h2 class="margin_left_right efeito_digitacao_titulo">Gestão do Tempo | Redes Sociais</h2>
             <p class="margin_left_right">Aqui você poderá controlar quanto tempo passa utilizando aplicativos de redes sociais por dia, durante o trabalho, escola, e em casa. Para isso selecione uma das opções e clique no botão abaixo assim que começar e/ou parar de utilizar redes sociais. </p>
         </section>
+
+
+        
         
         <!-- INÍCIO | Informações -->
 
@@ -93,7 +98,7 @@
         <!-- INÍCIO | Opções -->
 
         <section class="secao_opcoes">
-            <h3 class="margin_left_right margin_top_subtitulo">Em que lugar você está no momento: </h3>
+            <h3 class="margin_left_right margin_top_subtitulo" id="nome" >Em que lugar você está no momento: </h3>
        
             <div class="opcao_local_um">
                 <input type="checkbox" class="checkbox" name="horns" onclick="trabalho()">

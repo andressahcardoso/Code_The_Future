@@ -337,3 +337,18 @@ input {
 }
 
 /* FIM | Botões - Iníciar e Parar */
+
+
+.nome{
+    width: 130px;
+    border: solid black 1px;
+    padding: 2px;
+}
+
+.btnenviar {
+    margin-left: 90px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border: solid black 1px;
+   
+}

@@ -1,5 +1,6 @@
 ;(function(){
 
+
     // COMEÇO | Imagem Usuário
 
     const leitorDeArquivos = new FileReader(),
@@ -27,7 +28,6 @@
         submit.preventDefault(); // O método preventDefault() cancela o evento se for cancelável, significando que a ação padrão que pertence ao evento não ocorrerá. Nesse caso está impedindo que a página recarregue.
         leEAtualiza(); 
     })
-
 
     // COMEÇO | Botão Iniciar e Parar
 
@@ -79,6 +79,10 @@
     // INÍCIO | Horário.
      
     function inicio() {
+
+        
+
+
         today=new Date();
         h=today.getHours();
         m=today.getMinutes();
@@ -178,3 +182,35 @@
             document.getElementById('tempo_total').innerText= "Tempo Total de Uso |  " + HoraTotal + "Hora(s) " + MinutoTotal + "Minuto(s)";
         }
     }
+
+    
+    function nome() {
+        var usuario = document.getElementsByName('username2')[0].value;
+        document.getElementById('nome').innerHTML= usuario;
+    }
+    
+
+
+    function login() {
+
+        
+        var senha = document.getElementsByName('password')[0].value;
+   
+    
+        if (senha == "senacrs@1") {
+          window.location = "tela_principal.html";
+          
+          
+        }else{
+          alert("Dados incorretos. Preencha conforme abaixo. \n\n Usuário: seu nome \n Senha: senacrs@1");
+        }
+      }
+
+      
+
+    
+
+    
+
+
+    
