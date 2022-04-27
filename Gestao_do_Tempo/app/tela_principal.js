@@ -193,19 +193,33 @@
 
     function login() {
 
-        
+        var name = document.getElementsByName('username')[0].value;
         var senha = document.getElementsByName('password')[0].value;
    
     
-        if (senha == "senacrs@1") {
+        if (name == "admin" && senha == "senacrs") {
           window.location = "tela_principal.html";
           
           
         }else{
-          alert("Dados incorretos. Preencha conforme abaixo. \n\n Usuário: seu nome \n Senha: senacrs@1");
+          alert("Senha ou usuário inválido! ");
         }
       }
 
+      function myFunction() {
+        let text;
+        let person = prompt("Digite seu nome:");
+        if (person == null || person == "") {
+          text = "Usuário";
+        } 
+        
+        else {
+          text =  person;
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+
+     
       
 
     

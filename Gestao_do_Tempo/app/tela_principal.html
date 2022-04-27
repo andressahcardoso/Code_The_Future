@@ -46,14 +46,16 @@
                 <ul class="menu">   
                     <li><img id="imagem_usuario" class="img_usuario" src="../assets/Usuario.PNG" alt="Imagem Perfil"></li>
 
-                    <li><a class="usuario_nome" id="nome">Usuário</a>
+                    <li><a class="usuario_nome" id="demo">Usuário</a>
                         <ul>
                             <form id="selecionarAlterarImagem" class="btn_opcoes_imgUsuario">
                                 <li><a><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
                                 <input type="file" class="UploadImgUsuario" id="arquivo" required ></a></li>
                                 <li><a> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
-                                <input  class="nome" type="text" placeholder="Digite seu nome" id="username2" name="username2" >
-                                <button class="btnenviar" type="submit" onclick="nome()"> Enviar </button>
+        
+                                <li><a><button class="btn_opcoes_imgUsuario" onclick="myFunction()"> Nome Usuário </button></a></li>
+
+                                <li><a><button class="btn_opcoes_imgUsuario" onclick="hist()"> Histórico </button></a></li>
                             </form>          
                         </ul>
                     </li>      
@@ -135,6 +137,10 @@
         <!-- FIM | Botões - Iniciar e Parar -->
 
         <script src="tela_principal.js"></script>
+
+        <section>
+            <p id="historico"></p>
+        </section>
 
     </body>
 </html>
