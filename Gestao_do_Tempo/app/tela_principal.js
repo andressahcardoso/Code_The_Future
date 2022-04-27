@@ -206,25 +206,16 @@
         }
       }
 
-      function myFunction() {
+     function nome() {
         let text;
         let person = prompt("Digite seu nome:");
         if (person == null || person == "") {
           text = "Usuário";
         } 
-        
+
         else {
           text =  person;
         }
-        document.getElementById("demo").innerHTML = text;
+        document.getElementById("user").innerHTML = text;
       }
-
-     
-      
-
-    
-
-    
-
-
     
