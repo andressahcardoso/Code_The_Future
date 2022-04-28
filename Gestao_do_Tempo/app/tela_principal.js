@@ -200,7 +200,8 @@
       }
 
 
-      function nome() {
+     function nome() {
+
         let text;
         let person = prompt("Digite seu nome:");
         if (person == null || person == "") {
@@ -212,13 +213,4 @@
         }
         document.getElementById("user").innerHTML = text;
       }
-
-     
-      
-
-    
-
-    
-
-
     
