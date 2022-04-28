@@ -1,0 +1,128 @@
+<div class="body">
+
+<!-- INÍCIO | Imagens de Fundo -->
+
+<section class="secao_imagens_fundo">
+    <div>
+        <span><img class="imagem_fundo_1" src="../assets/1.PNG" alt="Imagem 1"/></span>
+    </div>
+</section>
+
+<section class="secao_imagens_fundo flex-end">
+    <div>
+        <span><img class="imagem_fundo_2" src="../assets/2.PNG" alt="Imagem 2"/></span>
+    </div>
+</section>
+
+<section class="secao_imagens_fundo flex-end column">
+    <div>
+        <span><img class="imagem_fundo_3" src="../assets/3.PNG" alt="Imagem 3"/></span>
+    </div>
+</section>
+
+<section class="secao_imagens_fundo flex-end column">
+    <div>
+        <span><img class="imagem_fundo_4" src="../assets/4.PNG" alt="Imagem 4"/></span>
+    </div>
+</section>
+
+<!-- FIM | Imagens de Fundo -->
+
+
+<!-- INÍCIO | Logo e Usuário -->
+
+<section class="header">
+    <img class="logo" src="../assets/Logo.PNG" alt="Logo"/>
+
+    <div class="usuario_informacoes">
+        <ul class="menu">   
+            <li><img id="imagem_usuario" class="img_usuario" src="../assets/Usuario.png" alt="Imagem Perfil"></li>
+
+            <li><a class="usuario_nome">Usuário</a>
+                <ul>
+                    <form id="selecionarAlterarImagem" class="btn_opcoes_imgUsuario">
+                        <li><a><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
+                        <input type="file" class="UploadImgUsuario" id="arquivo" required ></a></li>
+                        <li><a> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
+                    </form>          
+                </ul>
+            </li>      
+        </ul>
+    </div>
+</section>
+
+<!-- FIM | Logo e Usuário -->
+   
+
+<!-- INÍCIO | Barra de Status -->
+
+<section class="Barra_Status Barra_Status_Inativo" id="horario">
+    <p class="Barra_Status_Text ">INATIVO</p>
+</section>
+
+<section class="" id="tempo_total">
+    <p></p> <!--Mostra o tempo total -->
+</section>
+
+<section class="" id="cronometro">
+    <p></p> <!-- Mostra o cronômetro -->
+</section>
+
+
+<!-- FIM | Barra de Status -->
+
+
+<!-- INÍCIO | Informações -->
+
+<section class="secao_informações">
+    <h2 class="margin_left_right efeito_digitacao_titulo">Gestão do Tempo | Redes Sociais</h2>
+    <p class="margin_left_right">Aqui você poderá controlar quanto tempo passa utilizando aplicativos de redes sociais por dia, durante o trabalho, escola, e em casa. Para isso selecione uma das opções e clique no botão abaixo assim que começar e/ou parar de utilizar redes sociais. </p>
+</section>
+
+<!-- INÍCIO | Informações -->
+
+
+<!-- INÍCIO | Opções -->
+
+<section class="secao_opcoes">
+    <h3 class="margin_left_right margin_top_subtitulo">Em que lugar você está no momento: </h3>
+
+    <div class="opcao_local_um">
+        <input type="checkbox" class="checkbox" name="horns" onclick="trabalho()">
+        <label> Trabalho </label>
+    </div>
+
+    <div class="opcoes_local">
+        <input type="checkbox" class="checkbox" name="horns" onclick="escola()">
+        <label> Escola </label>
+    </div>
+
+    <div class="opcoes_local">
+        <input type="checkbox" class="checkbox" name="horns" onclick="casa()">
+        <label> Casa </label>
+    </div>
+
+    <div class="opcoes_local">
+        <input type="checkbox" class="checkbox" name="horns" onclick="outro()">
+        <label> Outro </label>
+    </div>
+</section>
+
+<!-- FIM | Opções -->
+
+
+<!-- INÍCIO | Botões - Iniciar e Parar -->
+
+<section class="secao_btn_inicio_fim flex-end column ">
+
+    <button onclick="inicio()" class="btn_inicio_fim inicio-btn" id="#iniciar"> Início </button>
+    <button onclick="fim()" class=" btn_inicio_fim fim-btn Ativar_Desativar_Botoes" id="#fim"> Fim / Parada </button>
+</section> 
+
+<!-- FIM | Botões - Iniciar e Parar -->
+
+</div>
+
+
+
+
