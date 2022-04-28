@@ -80,21 +80,29 @@ export class GestaoDoTempoComponent implements OnInit {
 
     let local = "Local Indefinido";
 
-    trabalho() {
+    let trabalho = function() {
         local = "Trabalho";
     }
 
-    escola(){
+    trabalho();
+
+    let escola = function(){
         local = "Escola";
     }
 
-    casa(){
+    escola();
+
+    let casa = function(){
         local = "Casa";
     }
 
-    outro(){
+    casa();
+
+    let outro = function(){
         local = "Local Indefinido";
     }
+
+    outro();
     
 
     // INÍCIO | Horário.
@@ -111,7 +119,7 @@ export class GestaoDoTempoComponent implements OnInit {
         let cronometro_horario: any = "";
 
      
-    inicio() {
+    let inicio = function() {
         let today=new Date();
         let h=today.getHours();
         let m=today.getMinutes();
@@ -168,9 +176,11 @@ export class GestaoDoTempoComponent implements OnInit {
         cronometro_horario = setInterval(function(){ segundo() },1000)
     }  
 
+    inicio();
+
 
     
-    function fim() {
+    let fim = function() {
         let today=new Date();
         let h=today.getHours();
         let m=today.getMinutes();
@@ -228,7 +238,13 @@ export class GestaoDoTempoComponent implements OnInit {
             let tempotot: any = document.getElementById("tempo_total")
             tempotot.innerText = "Tempo Total de Uso |  " + HoraTotal + "Hora(s) " + MinutoTotal + "Minuto(s)";
         }
+
+
     }
+
+    fim ();
+
+
 
 
 
