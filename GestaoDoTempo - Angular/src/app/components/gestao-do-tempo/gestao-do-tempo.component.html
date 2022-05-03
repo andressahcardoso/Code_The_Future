@@ -32,18 +32,21 @@
 <!-- INÍCIO | Logo e Usuário -->
 
 <section class="header">
-    <img class="logo" src="../assets/Logo.PNG" alt="Logo"/>
+    <img class="logo" src="../assets/Logo-tela-principal.PNG" alt="Logo"/>
 
     <div class="usuario_informacoes">
         <ul class="menu">   
             <li><img id="imagem_usuario" class="img_usuario" src="../assets/Usuario.png" alt="Imagem Perfil"></li>
 
-            <li><a class="usuario_nome">Usuário</a>
+            <li><a class="usuario_nome" id="user">Usuário</a>
                 <ul>
                     <form id="selecionarAlterarImagem" class="btn_opcoes_imgUsuario">
                         <li><a><label for="arquivo" class="btn_opcoes_imgUsuario">Selecionar Foto</label>
                         <input type="file" class="UploadImgUsuario" id="arquivo" required ></a></li>
                         <li><a> <button class="btn_opcoes_imgUsuario">Alterar Imagem</button></a></li>
+
+                        <li><a><button class="btn_opcoes_imgUsuario" (click)="nome()"> Nome Usuário </button></a></li>
+                        <li><a><button  class="btn_opcoes_imgUsuario" (click)="historico()">Histórico</button></a></li>
                     </form>          
                 </ul>
             </li>      
@@ -56,16 +59,12 @@
 
 <!-- INÍCIO | Barra de Status -->
 
-<section class="Barra_Status Barra_Status_Inativo" id="horario">
-    <p class="Barra_Status_Text ">INATIVO</p>
+<section class="Barra_Status Barra_Status_Inativo" [ngClass]="cor">
+    <p class="Barra_Status_Text" id="horario" >INATIVO</p>
 </section>
 
-<section class="" id="tempo_total">
-    <p></p> <!--Mostra o tempo total -->
-</section>
-
-<section class="" id="cronometro">
-    <p></p> <!-- Mostra o cronômetro -->
+<section class="Barra_Status_Cronometro Borda_Cronometro_Inativo" [ngClass]="border_color">
+    <p id="cronometro" class="text_cronometro_tempoTotal"></p> <!-- Mostra o cronômetro e o tempo total -->
 </section>
 
 
@@ -74,7 +73,10 @@
 
 <!-- INÍCIO | Informações -->
 
+
+
 <section class="secao_informações">
+    
     <h2 class="margin_left_right efeito_digitacao_titulo">Gestão do Tempo | Redes Sociais</h2>
     <p class="margin_left_right">Aqui você poderá controlar quanto tempo passa utilizando aplicativos de redes sociais por dia, durante o trabalho, escola, e em casa. Para isso selecione uma das opções e clique no botão abaixo assim que começar e/ou parar de utilizar redes sociais. </p>
 </section>
@@ -88,22 +90,22 @@
     <h3 class="margin_left_right margin_top_subtitulo">Em que lugar você está no momento: </h3>
 
     <div class="opcao_local_um">
-        <input type="checkbox" class="checkbox" name="horns" onclick="trabalho()">
+        <input type="checkbox" class="checkbox" name="horns" (click)="trabalho()">
         <label> Trabalho </label>
     </div>
 
     <div class="opcoes_local">
-        <input type="checkbox" class="checkbox" name="horns" onclick="escola()">
+        <input type="checkbox" class="checkbox" name="horns" (click)="escola()">
         <label> Escola </label>
     </div>
 
     <div class="opcoes_local">
-        <input type="checkbox" class="checkbox" name="horns" onclick="casa()">
+        <input type="checkbox" class="checkbox" name="horns" (click)="casa()">
         <label> Casa </label>
     </div>
 
     <div class="opcoes_local">
-        <input type="checkbox" class="checkbox" name="horns" onclick="outro()">
+        <input type="checkbox" class="checkbox" name="horns" (click)="outro()">
         <label> Outro </label>
     </div>
 </section>
@@ -115,11 +117,13 @@
 
 <section class="secao_btn_inicio_fim flex-end column ">
 
-    <button onclick="inicio()" class="btn_inicio_fim inicio-btn" id="#iniciar"> Início </button>
-    <button onclick="fim()" class=" btn_inicio_fim fim-btn Ativar_Desativar_Botoes" id="#fim"> Fim / Parada </button>
+    <button (click)="inicio()" class="btn_inicio_fim inicio-btn" [ngClass]="iniciobtn" id="#iniciar"> Início </button>
+    <button  (click)="fim()" class=" btn_inicio_fim fim-btn" [ngClass]="fimbtn" id="#fim"> Fim / Parada </button>
 </section> 
 
 <!-- FIM | Botões - Iniciar e Parar -->
+
+
 
 </div>
 
