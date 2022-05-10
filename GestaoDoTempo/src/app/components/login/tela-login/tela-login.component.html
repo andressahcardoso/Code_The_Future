@@ -1,0 +1,44 @@
+<div class="body">
+
+    <!-- INÍCIO | Imagens de Fundo -->
+    
+    <section class="secao_imagens_fundo">
+        <div>
+            <img class="imagem_fundo_1" src="../assets/imagem_inicio.png" alt="Imagem 1"/>
+        </div>
+    </section>
+    
+    
+    <!-- INÍCIO | Logo e Usuário -->
+    
+    <section class="header">
+        <img class="logo" src="../assets/Logo.PNG" alt="Logo"/>
+    </section>
+    
+    <section class="secao_informações">
+        <h2>Entrar na sua Conta:</h2>
+
+        <form [formGroup]="loginForm" class="form mt-4">
+        
+            <div class="form-group nome1">
+                <label for="name" class="title">Usuário:</label>
+                <input class="radius imputTexteNewsLetterNome form-control" formControlName="userName"
+                placeholder="Digite o nome de usuário"
+                autofocus>
+            </div>
+    
+            <div class="form-group senha2">
+                <label for="name" class="title">Senha:</label>
+                <input class="radius imputTexteNewsLetterNome form-control" type="password" formControlName="password" 
+                placeholder="Digite a senha"
+                autofocus>
+            </div>
+
+            <div class="enviar">
+                <button class="radius btnenviar" (click)="teste()" routerLink="gestaodotempo" type="submit" > Enviar </button>
+            </div>
+    
+        </form>
+    </section>
+</div> 
+

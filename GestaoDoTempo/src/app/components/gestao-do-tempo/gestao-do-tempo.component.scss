@@ -1,0 +1,358 @@
+*{margin: 0; padding: 0;}
+
+.body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* INÍCIO | Imagens de Fundo */
+
+.secao_imagens_fundo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex-end {
+	justify-content: flex-end;
+}
+
+.imagem_fundo_1 {
+    width: 70%;
+    height: 25%;
+}
+
+.imagem_fundo_2 {
+    width: 100%;
+    height: 25%;
+}
+
+.imagem_fundo_4 {
+    float: right;
+}
+
+.imagem_fundo_3 {
+    float: left;
+}
+
+/* FIM | Imagens de Fundo */
+
+
+/* INÍCIO | Logo e Usuário */
+
+.header {
+    height: 6%;
+    background-color: rgba(253, 253, 253, 0);
+    display: inline-block;
+    padding: 7px;
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+    margin-top: 2px;
+    margin-left: 20px;
+}
+
+.usuario_informacoes {
+    margin-top: -70px;
+}
+
+.menu{
+    list-style:none;
+    border:0px solid #c0c0c0;
+    float:right;
+    margin-top: 30px;
+    margin-right: 80px;
+    z-index: 1100;
+    }
+    
+    .menu li{
+        position:relative;
+        float:left;
+        border-right:0px solid #c0c0c0;
+    }
+    
+    .menu li a{
+        color:rgb(10, 10, 10); 
+        text-decoration: none; 
+        padding: 5px 10px; 
+        display: block;
+    }
+    
+    .menu li  ul{
+        position:absolute;
+        top:25px;
+        left:0;
+        background-color:#fff;
+        display:none;
+    }
+    
+    .menu li ul li{
+        border:0px solid #c0c0c0;
+        display:block;
+        width:150px;
+    }
+    
+    .menu li a:hover{
+        background:rgb(218, 216, 216);
+        color:#fff;
+        text-shadow:0px 0px 5px #fff;
+    }
+    
+    .menu li:hover ul{
+        display:block;
+    }
+
+.img_usuario {
+    width: 35px;
+    height: 35px; 
+    border-radius: 50px;
+}
+   
+.usuario_nome {
+    font-weight: 500;
+    font-size: 1.15em;
+}
+
+.btn_opcoes_imgUsuario {
+    background: rgba(255, 255, 255, 0);
+    border: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.UploadImgUsuario {
+    display: none; 
+}
+
+/* FIM | Logo e Usuário */
+
+
+/* INÍCIO | Barra de Status */
+
+.Barra_Status {
+    margin-top: 10px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 200;
+    font-size: medium;
+    color: #fff;
+}
+
+.Barra_Status_Text {
+    font-size: 1em;
+    color: rgb(255, 251, 251);
+    margin-right: 6em;
+    float: right;
+    margin-top: 9px;
+}
+
+.Barra_Status_Inativo {
+    pointer-events: none;
+    background-color: #c0c0c0;
+}
+
+.Barra_Status_Ativo {
+    pointer-events: none;
+    background-color: rgba(88, 234, 173, 1);
+}
+
+.Barra_Status_Fim {
+    pointer-events: none;
+    background-color: rgb(247, 158, 158);
+}
+
+.Borda_Cronometro_Inativo {
+    border: 1px solid white;
+    border-top: 1px solid #c0c0c0;
+}
+
+.Borda_Cronometro_Ativo {
+    border: 1px solid rgba(88, 234, 173, 1);
+}
+
+.Borda_Cronometro_Fim {
+    border: 1px solid rgb(247, 158, 158);
+}
+
+
+.Barra_Status_Cronometro {
+    height: 8%;
+    margin-top: -1px;
+    width: 20%;
+    margin-left: 40%;
+    display: flex;
+    padding-top: 8px;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.text_cronometro_tempoTotal {
+    margin-top: -1px;
+}
+
+
+/* FIM | Barra de Status */
+
+
+/* INÍCIO | Informações */
+
+.secao_informações {
+    flex-grow: 1;
+    margin-top: 24px;
+    z-index: 1000;
+}
+
+.margin_left_right {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.efeito_digitacao_titulo {
+    width: 31ch; /* ch - diz que em determinado espaço sempre deve conter x caracteres, nesse caso 31 */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    animation: typing 2s steps(100), infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 35px;
+    font-weight: 550;
+    display: flex;  
+}
+
+@keyframes typing { /* Usada para criar uma animação */
+    from {
+        width: 0;
+    }
+}
+
+h2, p {
+    color: black;
+    margin-top: 1.59%;
+    font-size: 1.15em;
+}
+
+/* FIM | Informações */
+
+
+/* INÍCIO | Opções */
+
+.secao_opcoes {
+    flex-grow: 1;
+    flex-shrink: 0;
+    z-index: 1000;
+    font-size: 1.0em;
+   
+}
+
+.margin_top_subtitulo {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    font-size: 1.35em;
+}
+
+.opcao_local_um {
+    color: black;
+    display:inline-block ;
+    margin-left: 36px;
+    width: 10%;
+    margin-top: 20px;
+}
+
+.opcoes_local {
+   width: 10%;
+   text-align: center;
+   display:inline-block ;
+   margin-left: 16%;
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    display: inline-block ;
+}
+
+input {
+    margin: 7px;
+}
+
+/* FIM | Opções */
+  
+
+/* INÍCIO | Botões - Iníciar e Parar */
+
+.secao_btn_inicio_fim {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    margin-top: -230px;
+    text-align: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.column {
+    min-height: 200px;
+    flex-direction: column;
+}
+
+.btn_inicio_fim {
+    width: 94%;
+    height: 10%;
+    border-radius: 5px;
+    border: none;
+    margin-left: 3%;
+    padding: 12px;
+    color: white;
+    font-size: 1.15em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.inicio-btn {
+    background: rgba(88, 234, 173, 1);
+    margin-bottom: 1% !important;
+    margin-inline-end: 10% ;
+}
+
+.fim-btn {  
+    background: rgba(254, 104, 105, 1);
+    margin-bottom: 4% 
+}
+
+.Ativar_Botoes {
+    pointer-events: visible;
+}
+
+.Desativar_Botoes {
+    pointer-events: none;
+}
+
+/* FIM | Botões - Iníciar e Parar */
+
+
+.teste {
+    z-index: 1000;
+}
