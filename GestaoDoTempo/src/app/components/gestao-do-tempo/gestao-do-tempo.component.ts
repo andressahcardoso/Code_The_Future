@@ -22,21 +22,22 @@ export class GestaoDoTempoComponent implements OnInit {
     Segundo2: any = 0;
     HoraInicio: any = 0;
     HoraFim: any = 0;
+    horario: any = 0;
+
     SomaSegundos: any = 0;
     HoraTotal: any = 0;
     MinutoTotal: any = 0;
     SegundoTotal: any = 0;
-    cronometro_horario: any = 0;
-
-    fimBtn: any = 0;
-    iniciarBtn: any = 0
-    horario: any = 0;
     tempo_total: any = 0;
-    cronometro: any = 0;
-
     segundos: number = 0;
     minutos: number = 0;
     horas: number = 0;
+
+    fimBtn: any = 0;
+    iniciarBtn: any = 0;
+    
+    cronometro_horario: any = 0;
+    cronometro: any = 0;
 
     text: any = 0;
 
@@ -206,7 +207,7 @@ export class GestaoDoTempoComponent implements OnInit {
         this.SegundoTotal = Math.round(this.SomaSegundos - (this.HoraTotal * 3600))
         
 
-
+        // INÍCIO | Cálculo tempo total e Histórico
 
         if (this.HoraTotal == 0 && this.MinutoTotal == 0){
             document.getElementById("cronometro")!.innerText =  `Tempo Total de Uso | ${this.SegundoTotal} Segundo(s)`;
@@ -215,21 +216,19 @@ export class GestaoDoTempoComponent implements OnInit {
         if (this.MinutoTotal > 0){
             document.getElementById("cronometro")!.innerText =  `Tempo Total de Uso | ${this.MinutoTotal} Minuto(s)`;
 
-            this.Informaçoes = ` \n Local: ${this.local} \n \n Horário de Início: ${this.Hora1}:${this.Minuto1} \n Horário de Fim: ${this.Hora2}:${this.Minuto2} \n \n Tempo Total de Uso | ${this.MinutoTotal} Minuto(s) \n \n`
+            this.Informaçoes = ` \n Local: ${this.local} \n \n Horário de Início: ${this.Hora1}:${this.Minuto1} \n Horário de Fim: ${this.Hora2}:${this.Minuto2} \n \n Tempo Total de Uso | ${this.MinutoTotal} Minuto(s) \n \n` // Histórico
 
-            this.hist.push(this.Informaçoes)
+            this.hist.push(this.Informaçoes) // Histórico
         }
 
 
         if (this.HoraTotal > 0) {
             document.getElementById("cronometro")!.innerText =  `Tempo Total de Uso | ${this.HoraTotal} Hora(s) ${this.MinutoTotal} Minuto(s)`;
 
-            this.Informaçoes = ` \n Local: ${this.local} \n \n Horário de Início: ${this.Hora1}:${this.Minuto1} \n Horário de Fim: ${this.Hora2}:${this.Minuto2} \n \n Tempo Total de Uso | ${this.HoraTotal} Hora(s) ${this.MinutoTotal} Minuto(s) \n \n`
+            this.Informaçoes = ` \n Local: ${this.local} \n \n Horário de Início: ${this.Hora1}:${this.Minuto1} \n Horário de Fim: ${this.Hora2}:${this.Minuto2} \n \n Tempo Total de Uso | ${this.HoraTotal} Hora(s) ${this.MinutoTotal} Minuto(s) \n \n` // Histórico
 
-            this.hist.push(this.Informaçoes)
+            this.hist.push(this.Informaçoes) // Histórico
         }
-
-
 
     }
 
@@ -251,6 +250,9 @@ export class GestaoDoTempoComponent implements OnInit {
 
       }
 
+
+      // INÍCIO | Histórico
+
       historico(){
         this.dialog.open(DialogComponent);
 
@@ -265,8 +267,7 @@ export class GestaoDoTempoComponent implements OnInit {
         }
 
       }
-
-        
+    
 }
 
 

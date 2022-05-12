@@ -19,14 +19,11 @@ export class TelaLoginComponent implements OnInit {
         this.loginForm = this.formBuilder.group({
             userName: ['', Validators.required], 
             password: ['', Validators.required]
-            
         })
-      
     }
     
     
-    
-    teste() {
+    login() {
 
         if(this.loginForm.value.userName == "senac" && this.loginForm.value.password == "123"){
             console.log(this.loginForm.value)
@@ -37,6 +34,5 @@ export class TelaLoginComponent implements OnInit {
             console.log(this.loginForm.value)
             alert("Senha ou usuário inválido! ");
         }
-
     }
 }

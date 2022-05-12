@@ -46,8 +46,6 @@
     float: left;
 }
 
-/* FIM | Imagens de Fundo */
-
 
 /* INÍCIO | Logo e Usuário */
 
@@ -138,8 +136,6 @@
     display: none; 
 }
 
-/* FIM | Logo e Usuário */
-
 
 /* INÍCIO | Barra de Status */
 
@@ -190,7 +186,6 @@
     border: 1px solid rgb(247, 158, 158);
 }
 
-
 .Barra_Status_Cronometro {
     height: 8%;
     margin-top: -1px;
@@ -206,9 +201,6 @@
 .text_cronometro_tempoTotal {
     margin-top: -1px;
 }
-
-
-/* FIM | Barra de Status */
 
 
 /* INÍCIO | Informações */
@@ -248,8 +240,6 @@ h2, p {
     font-size: 1.15em;
 }
 
-/* FIM | Informações */
-
 
 /* INÍCIO | Opções */
 
@@ -257,8 +247,7 @@ h2, p {
     flex-grow: 1;
     flex-shrink: 0;
     z-index: 1000;
-    font-size: 1.0em;
-   
+    font-size: 1.0em;   
 }
 
 .margin_top_subtitulo {
@@ -293,8 +282,6 @@ input {
     margin: 7px;
 }
 
-/* FIM | Opções */
-  
 
 /* INÍCIO | Botões - Iníciar e Parar */
 
@@ -348,11 +335,4 @@ input {
 
 .Desativar_Botoes {
     pointer-events: none;
-}
-
-/* FIM | Botões - Iníciar e Parar */
-
-
-.teste {
-    z-index: 1000;
 }

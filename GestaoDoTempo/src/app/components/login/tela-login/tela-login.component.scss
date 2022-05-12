@@ -24,10 +24,7 @@
 
 .imagem_fundo_1 {
     margin-top: 0%;
- 
 }
-
-/* FIM | Imagens de Fundo */
 
 
 /* INÍCIO | Logo */
@@ -48,8 +45,7 @@
 }
 
 
-/* FIM | Logo */
-
+/* INÍCIO | Informações */
 
 .title {
     width: 100%;
@@ -88,7 +84,6 @@
     z-index: 1000;
 }
 
-
 .btnenviar {
     display: block;
     width: 20%;
@@ -102,7 +97,6 @@
     z-index: 1000;
 }
 
-
 .secao_imagens_fundo {
     width: 100%;
     height: 99%;
@@ -111,12 +105,10 @@
     flex-wrap: wrap;
 }
 
-
 .imagem_fundo_1 {
     width: 70%;
     height: 92%;
 }
-
 
 .logo {
     height: 40px;
@@ -124,7 +116,6 @@
     margin-left: 92%;
     float: right;
 }
-
 
 .secao_informações {
     flex-grow: 1;
@@ -137,4 +128,3 @@
     margin-right: 40px;
     margin-left: 40px;
 }
-
