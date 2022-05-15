@@ -3,6 +3,7 @@ import { emitDistinctChangesOnlyDefaultValue } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/components/dialog/dialog.component';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gestao-do-tempo',
@@ -11,6 +12,8 @@ import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 })
 
 export class GestaoDoTempoComponent implements OnInit {
+
+    imgsrc = '../assets/Usuario.png';
 
     local = "Local Indefinido";
 
@@ -47,33 +50,63 @@ export class GestaoDoTempoComponent implements OnInit {
     fimbtn: string = "Desativar_Botoes";
     Informaçoes: any = "";
     
+    isChecked1 = false;
+    isChecked2 = false;
+    isChecked3 = false;
+    isChecked4 = false;
 
-    constructor(public dialog: MatDialog) { }
 
- 
+    constructor(public dialog: MatDialog, public _d: DomSanitizer) { }
+
+    // INÍCIO | Foto
+
+    fileChange(e: any) {
+        const file = e.srcElement.files[0]; 
+        this.imgsrc = window.URL.createObjectURL(file); 
+    }
+    
+
   ngOnInit(): void {
   }
 
     hist: any = [];
 
+    // INÍCIO | CheckBox
+
+    local1(){
+        this.isChecked1 = true;
+        this.isChecked2 = false;
+        this.isChecked3 = false;
+        this.isChecked4 = false;
+    }
+
+    local2(){
+        this.isChecked1 = false;
+        this.isChecked2 = true;
+        this.isChecked3 = false;
+        this.isChecked4 = false;
+    }
+
+    local3(){
+        this.isChecked1 = false;
+        this.isChecked2 = false;
+        this.isChecked3 = true;
+        this.isChecked4 = false;
+    }
+
+    local4(){
+        this.isChecked1 = false;
+        this.isChecked2 = false;
+        this.isChecked3 = false;
+        this.isChecked4 = true;
+    }
 
     // INÍCIO | Local.
 
-    trabalho(){
-        this.local = "Trabalho";
+    SetLocal(local: any){
+        this.local = local   
     }
-
-    escola(){
-        this.local = "Escola";
-    }
-
-    casa(){
-        this.local = "Casa";
-    }
- 
-    outro(){
-        this.local = "Local Indefinido";
-    }
+   
 
     // INÍCIO | Botão de iniciar.
 
@@ -211,7 +244,12 @@ export class GestaoDoTempoComponent implements OnInit {
 
         if (this.HoraTotal == 0 && this.MinutoTotal == 0){
             document.getElementById("cronometro")!.innerText =  `Tempo Total de Uso | ${this.SegundoTotal} Segundo(s)`;
+
+            this.Informaçoes = ` \n Local: ${this.local} \n \n Horário de Início: ${this.Hora1}:${this.Minuto1} \n Horário de Fim: ${this.Hora2}:${this.Minuto2} \n \n Tempo Total de Uso | ${this.SegundoTotal} Segundo(s) \n \n` // Histórico
+
+            this.hist.push(this.Informaçoes) // Histórico
         }
+
 
         if (this.MinutoTotal > 0){
             document.getElementById("cronometro")!.innerText =  `Tempo Total de Uso | ${this.MinutoTotal} Minuto(s)`;
@@ -251,9 +289,9 @@ export class GestaoDoTempoComponent implements OnInit {
       }
 
 
-      // INÍCIO | Histórico
+    // INÍCIO | Histórico
 
-      historico(){
+    historico(){
         this.dialog.open(DialogComponent);
 
         console.log(this.hist)
@@ -266,7 +304,7 @@ export class GestaoDoTempoComponent implements OnInit {
             document.getElementById("history")!.innerText = `${this.hist}`;
         }
 
-      }
+    }
     
 }
 

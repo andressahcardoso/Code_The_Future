@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GestaoDoTempoComponent } from './gestao-do-tempo.component';
 
 describe('GestaoDoTempoComponent', () => {

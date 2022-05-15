@@ -14,6 +14,10 @@ import { LoginModule } from './components/login/login.module';
 //  import { AutenticacaoUsuarioService } from './components/tela-login/autenticacao-usuario.service';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -32,9 +36,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatButtonModule,
     LoginModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
