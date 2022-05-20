@@ -8,4 +8,5 @@ import { CommonModule } from '@angular/common';
     declarations: [ TelaLoginComponent ],
     imports: [ CommonModule, ReactiveFormsModule ]
 })
+
 export class LoginModule { }

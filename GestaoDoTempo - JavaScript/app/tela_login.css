@@ -2,8 +2,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    margin: 0;
-    
+    margin: 0;  
     display: flex;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -40,6 +39,7 @@ body {
     height: 102.2%;
 }
 
+
 /* INÍCIO | Logo e Usuário */
 
 .header {
@@ -47,8 +47,7 @@ body {
     background-color: rgba(253, 253, 253, 0);
     display: flex;
     padding: 7px;
-    z-index: 1000;
-    
+    z-index: 1000;  
 }
 
 .logo {
@@ -104,7 +103,6 @@ body {
     margin-top: 5%;
 }
 
-
 .btnenviar {
     display: block;
     width: 20%;
@@ -126,16 +124,14 @@ body {
     background-color: rgb(255, 255, 255);
     cursor: pointer;
     margin-top: -72.2px;
-   border-left: none;
-   border-right: none;
-   text-decoration: none;
+    border-left: none;
+    border-right: none;
+    text-decoration: none;
 }
 
 .pular {
     text-decoration: none;
 }
-
-
 
 .btnpular2 {
     display: block;

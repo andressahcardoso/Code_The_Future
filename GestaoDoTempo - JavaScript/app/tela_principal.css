@@ -1,6 +1,6 @@
 *{margin: 0; padding: 0;}
 
-.body {
+body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     height: 100%;
@@ -28,12 +28,7 @@
 	justify-content: flex-end;
 }
 
-.imagem_fundo_1 {
-    width: 70%;
-    height: 25%;
-}
-
-.imagem_fundo_2 {
+.imagem_fundo_1, .imagem_fundo_2 {
     width: 100%;
     height: 25%;
 }
@@ -71,7 +66,7 @@
     list-style:none;
     border:0px solid #c0c0c0;
     float:right;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-right: 80px;
     z-index: 1100;
     }
@@ -101,12 +96,15 @@
         border:0px solid #c0c0c0;
         display:block;
         width:150px;
+        border: 0.2px solid black;
+        margin-top: -1px;
     }
     
     .menu li a:hover{
         background:rgb(218, 216, 216);
         color:#fff;
         text-shadow:0px 0px 5px #fff;
+       
     }
     
     .menu li:hover ul{
@@ -114,14 +112,14 @@
     }
 
 .img_usuario {
-    width: 35px;
-    height: 35px; 
+    width: 35;
+    height: 35; 
     border-radius: 50px;
 }
    
 .usuario_nome {
     font-weight: 500;
-    font-size: 1.15em;
+    font-size: 1em;
 }
 
 .btn_opcoes_imgUsuario {
@@ -155,7 +153,7 @@
     color: rgb(255, 251, 251);
     margin-right: 6em;
     float: right;
-    margin-top: 9px;
+    margin-top: -5px;
 }
 
 .Barra_Status_Inativo {
@@ -173,33 +171,38 @@
     background-color: rgb(247, 158, 158);
 }
 
-.Borda_Cronometro_Inativo {
-    border: 1px solid white;
-    border-top: 1px solid #c0c0c0;
-}
-
-.Borda_Cronometro_Ativo {
-    border: 1px solid rgba(88, 234, 173, 1);
-}
-
-.Borda_Cronometro_Fim {
-    border: 1px solid rgb(247, 158, 158);
-}
-
-.Barra_Status_Cronometro {
+.Barra_Status_Tempo_Total {
     height: 8%;
     margin-top: -1px;
     width: 20%;
     margin-left: 40%;
+    float: right;
+    background-color: rgb(255, 255, 255) ;
     display: flex;
-    padding-top: 8px;
     align-items: center;
     justify-content: center;
     z-index: 200;
+    color: rgb(5, 5, 5);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(247, 158, 158);
 }
 
-.text_cronometro_tempoTotal {
-    margin-top: -1px;
+.Barra_Status_Cronometro {
+    height: 8%;
+    margin-top: -22px;
+    width: 20%;
+    margin-left: 40%;
+    float: right;
+    background-color: rgb(255, 255, 255) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    color: rgb(5, 5, 5);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(88, 234, 173, 1);
 }
 
 
@@ -218,13 +221,12 @@
 
 .efeito_digitacao_titulo {
     width: 31ch; /* ch - diz que em determinado espaço sempre deve conter x caracteres, nesse caso 31 */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8em;
+    font-family: monospace;
+    font-size: 2em;
     animation: typing 2s steps(100), infinite;
     white-space: nowrap;
     overflow: hidden;
     height: 35px;
-    font-weight: 550;
     display: flex;  
 }
 
@@ -237,7 +239,6 @@
 h2, p {
     color: black;
     margin-top: 1.59%;
-    font-size: 1.15em;
 }
 
 
@@ -247,14 +248,10 @@ h2, p {
     flex-grow: 1;
     flex-shrink: 0;
     z-index: 1000;
-    font-size: 1.0em;   
 }
 
 .margin_top_subtitulo {
-    margin-top: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550;
-    font-size: 1.35em;
+    margin-top: 40px;
 }
 
 .opcao_local_um {
@@ -279,10 +276,9 @@ h2, p {
 }
 
 input {
-    background-color: black;
     margin: 7px;
 }
-
+ 
 
 /* INÍCIO | Botões - Iníciar e Parar */
 
@@ -311,7 +307,7 @@ input {
     margin-left: 3%;
     padding: 12px;
     color: white;
-    font-size: 1.15em;
+    font-size: 1em;
     font-weight: bold;
     cursor: pointer;
     z-index: 1000;
@@ -330,10 +326,19 @@ input {
     margin-bottom: 4% 
 }
 
-.Ativar_Botoes {
-    pointer-events: visible;
+.Ativar_Desativar_Botoes {
+    pointer-events: none;
 }
 
-.Desativar_Botoes {
-    pointer-events: none;
+.nome{
+    width: 130px;
+    border: solid black 1px;
+    padding: 2px;
+}
+
+.btnenviar {
+    margin-left: 90px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border: solid black 1px; 
 }

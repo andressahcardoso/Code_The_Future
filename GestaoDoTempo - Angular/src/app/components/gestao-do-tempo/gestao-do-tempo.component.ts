@@ -307,5 +307,3 @@ export class GestaoDoTempoComponent implements OnInit {
     }
     
 }
-
-

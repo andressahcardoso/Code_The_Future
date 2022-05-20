@@ -1,6 +1,6 @@
 *{margin: 0; padding: 0;}
 
-body {
+.body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     height: 100%;
@@ -28,9 +28,15 @@ body {
 	justify-content: flex-end;
 }
 
-.imagem_fundo_1, .imagem_fundo_2 {
-    width: 100%;
+.imagem_fundo_1 {
+    width: 70%;
     height: 25%;
+}
+
+.imagem_fundo_2 {
+    width: 100%;
+    height: 24%;
+    margin-right: 70px;
 }
 
 .imagem_fundo_4 {
@@ -40,8 +46,6 @@ body {
 .imagem_fundo_3 {
     float: left;
 }
-
-/* FIM | Imagens de Fundo */
 
 
 /* INÍCIO | Logo e Usuário */
@@ -68,7 +72,7 @@ body {
     list-style:none;
     border:0px solid #c0c0c0;
     float:right;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-right: 80px;
     z-index: 1100;
     }
@@ -98,15 +102,12 @@ body {
         border:0px solid #c0c0c0;
         display:block;
         width:150px;
-        border: 0.2px solid black;
-        margin-top: -1px;
     }
     
     .menu li a:hover{
         background:rgb(218, 216, 216);
         color:#fff;
         text-shadow:0px 0px 5px #fff;
-       
     }
     
     .menu li:hover ul{
@@ -114,14 +115,14 @@ body {
     }
 
 .img_usuario {
-    width: 35;
-    height: 35; 
+    width: 35px;
+    height: 35px; 
     border-radius: 50px;
 }
    
 .usuario_nome {
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.15em;
 }
 
 .btn_opcoes_imgUsuario {
@@ -135,8 +136,6 @@ body {
 .UploadImgUsuario {
     display: none; 
 }
-
-/* FIM | Logo e Usuário */
 
 
 /* INÍCIO | Barra de Status */
@@ -157,7 +156,7 @@ body {
     color: rgb(255, 251, 251);
     margin-right: 6em;
     float: right;
-    margin-top: -5px;
+    margin-top: 9px;
 }
 
 .Barra_Status_Inativo {
@@ -175,40 +174,34 @@ body {
     background-color: rgb(247, 158, 158);
 }
 
-.Barra_Status_Tempo_Total {
-    height: 8%;
-    margin-top: -1px;
-    width: 20%;
-    margin-left: 40%;
-    float: right;
-    background-color: rgb(255, 255, 255) ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 200;
-    color: rgb(5, 5, 5);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(247, 158, 158);
+.Borda_Cronometro_Inativo {
+    border: 1px solid white;
+    border-top: 1px solid #c0c0c0;
+}
+
+.Borda_Cronometro_Ativo {
+    border: 1px solid rgba(88, 234, 173, 1);
+}
+
+.Borda_Cronometro_Fim {
+    border: 1px solid rgb(247, 158, 158);
 }
 
 .Barra_Status_Cronometro {
     height: 8%;
-    margin-top: -22px;
+    margin-top: -1px;
     width: 20%;
     margin-left: 40%;
-    float: right;
-    background-color: rgb(255, 255, 255) ;
     display: flex;
+    padding-top: 8px;
     align-items: center;
     justify-content: center;
     z-index: 200;
-    color: rgb(5, 5, 5);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(88, 234, 173, 1);
 }
-/* FIM | Barra de Status */
+
+.text_cronometro_tempoTotal {
+    margin-top: -1px;
+}
 
 
 /* INÍCIO | Informações */
@@ -226,12 +219,13 @@ body {
 
 .efeito_digitacao_titulo {
     width: 31ch; /* ch - diz que em determinado espaço sempre deve conter x caracteres, nesse caso 31 */
-    font-family: monospace;
-    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
     animation: typing 2s steps(100), infinite;
     white-space: nowrap;
     overflow: hidden;
     height: 35px;
+    font-weight: 550;
     display: flex;  
 }
 
@@ -244,9 +238,8 @@ body {
 h2, p {
     color: black;
     margin-top: 1.59%;
+    font-size: 1.15em;
 }
-
-/* FIM | Informações */
 
 
 /* INÍCIO | Opções */
@@ -255,10 +248,14 @@ h2, p {
     flex-grow: 1;
     flex-shrink: 0;
     z-index: 1000;
+    font-size: 1.0em;   
 }
 
 .margin_top_subtitulo {
-    margin-top: 40px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    font-size: 1.35em;
 }
 
 .opcao_local_um {
@@ -283,11 +280,10 @@ h2, p {
 }
 
 input {
+    background-color: black;
     margin: 7px;
 }
 
-/* FIM | Opções */
-  
 
 /* INÍCIO | Botões - Iníciar e Parar */
 
@@ -316,7 +312,7 @@ input {
     margin-left: 3%;
     padding: 12px;
     color: white;
-    font-size: 1em;
+    font-size: 1.15em;
     font-weight: bold;
     cursor: pointer;
     z-index: 1000;
@@ -335,23 +331,10 @@ input {
     margin-bottom: 4% 
 }
 
-.Ativar_Desativar_Botoes {
+.Ativar_Botoes {
+    pointer-events: visible;
+}
+
+.Desativar_Botoes {
     pointer-events: none;
-}
-
-/* FIM | Botões - Iníciar e Parar */
-
-
-.nome{
-    width: 130px;
-    border: solid black 1px;
-    padding: 2px;
-}
-
-.btnenviar {
-    margin-left: 90px;
-    padding-right: 4px;
-    padding-left: 4px;
-    border: solid black 1px;
-   
 }
