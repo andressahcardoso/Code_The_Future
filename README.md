@@ -1,5 +1,5 @@
 <h1 align="center"> Projeto Code The Future | SKA </h1>
-<h2 align="center"> Gestão de Tempo | Redes Sociais </h2>
+<h2 align="center"> Gestão do Tempo | Redes Sociais </h2>
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
@@ -9,7 +9,7 @@
 
 <h4> Informações: </h4>
 
-<p align="justify" > Arquivos como brainstorming, protótipo de tela e documentos do projeto podem ser acessados no mesmo repositório. </p>
+<p align="justify" > Arquivos como brainstorming, protótipo de tela e documentos do projeto podem ser acessados no mesmo repositório. Para testes do projeto Angular considere o NOME: senac e a SENHA: 123 </p>
 
 <p> Para saber mais sobre o projeto Code The Future, acesse o site da SKA <a href="https://ska.com.br/"> aqui. </a> </p>
 
